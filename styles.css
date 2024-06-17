@@ -1,0 +1,136 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-column {
+    flex: 1;
+    padding: 0 10px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="number"], input[type="range"], select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type="range"] {
+    padding: 0;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+.results-header {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.results {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    position: relative;
+}
+
+.result-column {
+    flex: 1;
+    padding: 10px;
+}
+
+.result-column p {
+    margin: 0 0 10px;
+}
+
+.vertical-line {
+    width: 1px; 
+    background-color: #000; 
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 45%;
+    transform: translateX(-50%);
+}
+
+@media (max-width: 600px) {
+    .form-row {
+        flex-direction: column;
+    }
+    
+    .results {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .vertical-line {
+        display: none;
+    }
+}
+
+@media (max-width: 1024px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    input[type="number"], input[type="range"], select {
+        padding: 8px;
+    }
+
+    .results-header {
+        font-size: 1em;
+    }
+
+    .result-column {
+        padding: 8px;
+    }
+}
